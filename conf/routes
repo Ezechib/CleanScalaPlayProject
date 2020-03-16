@@ -11,3 +11,7 @@ GET        /create              controllers.HomeController.create
 GET        /delete              controllers.HomeController.delete
 GET        /overriding          controllers.HomeController.overriding
 GET        /adding              controllers.HomeController.adding
+GET        /reading             controllers.HomeController.reading
+GET        /removing            controllers.HomeController.removing
+GET        /addFlash            controllers.HomeController.addFlash
+GET        /readFlash           controllers.HomeController.readFlash

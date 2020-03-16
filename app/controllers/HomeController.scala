@@ -61,4 +61,20 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   def adding() = Action { implicit request: Request[AnyContent] =>
     Ok("Session added").withSession(request.session + ("connected" -> "user@gmail.com"))
   }
+
+  def reading() = Action { implicit request: Request[AnyContent] =>
+    Ok(request.session.get("connected").getOrElse("User is not logged in"))
+  }
+
+  def removing() = Action { implicit request: Request[AnyContent] =>
+    Ok("Session removed").withSession(request.session - "connected")
+  }
+
+  def addFlash() = Action { implicit request: Request[AnyContent] =>
+    Redirect("readFlash").flashing("success" -> "You have been successfully redirected")
+  }
+
+  def readFlash() = Action { implicit request: Request[AnyContent] =>
+    Ok(request.flash.get("success").getOrElse("Something went wrong while redirecting"))
+  }
 }
