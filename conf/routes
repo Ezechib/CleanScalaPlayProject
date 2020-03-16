@@ -2,4 +2,12 @@ GET        /assets/*file        controllers.Assets.versioned(path="/public", fil
 GET        /                    controllers.HomeController.index
 GET        /help                controllers.HomeController.help
 GET        /infinite            controllers.HomeController.infinite
-GET        /Help                controllers.HomeController.Help
+GET        /Todo                controllers.HomeController.Todo
+GET        /Hello               controllers.HomeController.Hello
+GET        /Charset             controllers.HomeController.Charset
+GET        /request             controllers.HomeController.request
+GET        /cookie              controllers.HomeController.cookie
+GET        /create              controllers.HomeController.create
+GET        /delete              controllers.HomeController.delete
+GET        /overriding          controllers.HomeController.overriding
+GET        /adding              controllers.HomeController.adding
